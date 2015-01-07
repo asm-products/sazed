@@ -1,0 +1,127 @@
+---
+---
+.header
+  background: #2C323D
+  color: #ccc
+  .container-fluid
+    padding-top: 20px
+    padding-bottom: 20px
+  a
+    color: #ddd
+    &:hover
+      color: #fff
+      text-decoration: none
+  .logo
+    font-size: 20px
+    line-height: 34px
+    margin-left: 20px
+  .search-form
+    margin-right: 20px
+
+.menu
+  margin: 40px 20px
+  padding: 0
+  list-style: none
+  .pages
+    margin: 0
+    padding: 0
+    list-style: none
+  li
+    line-height: 30px
+  .category-title
+    margin: 25px 0 10px 0
+    font-size: 12px
+    text-transform: uppercase
+  a
+    display: inline-block
+    color: #888
+    line-height: 20px
+    &:hover
+      color: #444
+      text-decoration: none
+  .active a
+    font-weight: bold
+    color: #444
+
+.page-home .header .search-form
+  display: none
+
+.home-search
+  text-align: center
+
+.home-categories
+  margin: 0 10px
+  .panel-heading
+    font-size: 100%
+    font-weight: normal
+    margin: 0
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+  .panel .page
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+
+.content
+  color: #555
+  margin: 40px 20px
+  padding: 40px
+  border: 1px solid #e9e9e9
+  -webkit-box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1)
+  .title
+    margin: 0 0 30px 0
+  h1, h2, h3, h4, h5, h6
+    color: #222
+  p, ul, ol, pre, blockquote, table, iframe
+    margin-bottom: 1em
+  img
+    display: block
+    max-width: 100%
+    height: auto
+    margin: 0 auto
+    background: #fff
+    padding: 4px
+    border: 1px solid #D6D6D6
+    border-radius: 4px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+  code
+    background-color: #FFFDDC
+    color: #555
+  pre
+    background: #FFFDDC
+    border: 0
+    code
+      color: #657B83
+  .hljs
+    background: none
+  .page-meta
+    font-size: 85%
+    color: #999
+    margin-top: 50px
+    a
+      color: #999
+      border-bottom: 1px dotted #999
+      &:hover
+        color: #428BCA
+        text-decoration: none
+
+.footer .copyright
+  font-size: 85%
+  color: #999
+  margin: 0 20px 40px 0
+
+.page-excerpt .search-query
+  background: #FFFDDC
+
+.error
+  padding: 0 20px
+
+@media only screen and (max-width: 767px)
+  .home-search .form-group
+    margin-bottom: 0
+  #home-search
+    margin-bottom: 10px

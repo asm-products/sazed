@@ -1,0 +1,10 @@
+# Site settings
+title: Sazed
+description: Sazed's description
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+sass:
+    sass_dir: _sass
+    style: compressed
