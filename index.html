@@ -14,12 +14,14 @@ title: Home
 <div class="home-categories row">
   {% for category in site.categories %}
     <div class="col col-sm-4">
-      <div class="panel panel-default {{class}}">
-        <h2 class="panel-heading">{{title}}</h2>
+      <div class="panel panel-default {{category[0]}}">
+        <h2 class="panel-heading">{{category[1]}}</h2>
         <ul class="list-group pages">
-          {{#files}}
-            <li class="list-group-item page"><a href="/{{slug}}">{{title}}</a></li>
-          {{/files}}
+          {% for page in site.pages %}
+            {% if page.category == category[0] %}
+            <li class="list-group-item page"><a href="{{page.url}}">{{page.title}}</a></li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </div>
