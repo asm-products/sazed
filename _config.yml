@@ -4,6 +4,7 @@ description: Sazed's description
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 copyright: Copyright &copy; Abhay Rana
 email: me@captnemo.in
+repo: captn3m0/sazed
 categories:
   top: Main Articles
   policy: Policy

@@ -21,3 +21,5 @@ System.config({
 });
 
 System.import('sazed');
+//TODO: Shift to this once you install the System:CSS plugin
+//System.import('bootstrap/css/bootstrap.min.css!')
