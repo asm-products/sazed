@@ -4,21 +4,7 @@ layout: default
 <div class="row">
     <div class="col-sm-3">
 
-        <ul class="menu">
-        {% for category in site.categories %}
-            <li class="category">
-                <h5 class="category-title cat-{{category[0]}}">{{category[1]}}</h5>
-                {% for page in site.pages %}
-                    {% if page.category == category[0] %}
-                    <ul class="pages">
-                    <!-- TODO: Add active class below -->
-                    <li class="page"><a href="{{page.url}}">{{page.title}}</a></li>
-                    {% endif %}
-                {% endfor %}
-                </ul>
-            </li>
-        {% endfor %}
-        </ul>
+        {% include menu.html %}
 
     </div>
     <div class="col-sm-9">
