@@ -1,15 +1,14 @@
 {
   "registry": "jspm",
   "name": "sazed",
-  "ignore": "debug",
   "directories": {
     "baseURL": "js",
     "packages": "js/lib"
   },
   "dependencies": {
+    "EpicEditor": "github:OscarGodson/EpicEditor@^0.2.3",
     "bootstrap": "3.3.1",
     "github": "github:michael/github@0.10.3",
-    "jquery": "1.11.2",
-    "masonry": "3.2"
+    "jquery": "1.11.2"
   }
 }

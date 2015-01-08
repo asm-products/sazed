@@ -1,20 +1,11 @@
 ---
 ---
 
-System.import 'jquery', ($)->
+$ = require 'jquery'
+editor = require 'EpicEditor/epiceditor/js/epiceditor.min'
 
-  System.import 'masonry'
-
-  $(document).ready ->
-    if $(".content").length
-      
-      # Add Bootstrap styling to tables
-      $(".content table").addClass "table"
-      
-      # FitVids
-      $(".content").fitVids()
-    if $(".home-categories").length
-      $(".home-categories").masonry
-        columnWidth: ".col"
-        itemSelector: ".col"
-        transitionDuration: 0
+$(document).ready ->
+  if $(".content").length
+    
+    # Add Bootstrap styling to tables
+    $(".content table").addClass "table"
