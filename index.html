@@ -14,7 +14,7 @@ title: Home
 <div class="home-categories row">
   {% for category in site.categories %}
     <div class="col col-sm-4">
-      <div class="panel panel-default {{category[0]}}">
+      <div class="panel panel-default cat-{{category[0]}}">
         <h2 class="panel-heading">{{category[1]}}</h2>
         <ul class="list-group pages">
           {% for page in site.pages %}

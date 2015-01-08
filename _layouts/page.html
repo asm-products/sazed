@@ -5,42 +5,36 @@ layout: default
     <div class="col-sm-3">
 
         <ul class="menu">
-        {{#pages}}
-            {{#is_index}}
-                {{#files}}
-                    <li class="page{{#active}} active{{/active}}"><a href="/{{slug}}">{{title}}</a></li>
-                {{/files}}
-            {{/is_index}}
-            {{^is_index}}
+        {% for category in site.categories %}
             <li class="category">
-                <h5 class="category-title">{{title}}</h5>
-                <ul class="pages">
-                {{#files}}
-                    <li class="page{{#active}} active{{/active}}"><a href="/{{slug}}">{{title}}</a></li>
-                {{/files}}
+                <h5 class="category-title cat-{{category[0]}}">{{category[1]}}</h5>
+                {% for page in site.pages %}
+                    {% if page.category == category[0] %}
+                    <ul class="pages">
+                    <!-- TODO: Add active class below -->
+                    <li class="page"><a href="{{page.url}}">{{page.title}}</a></li>
+                    {% endif %}
+                {% endfor %}
                 </ul>
             </li>
-            {{/is_index}}
-        {{/pages}}
+        {% endfor %}
         </ul>
 
     </div>
     <div class="col-sm-9">
 
         <section class="content">
-            {{#meta.title}}<h1 class="title">{{meta.title}}</h1>{{/meta.title}}
+            <h1 class="title">{{page.title}}</h1>
 
-            {{{ content }}}
+            {{ content }}
 
             <div class="page-meta clearfix">
-                {{#config.support_email}}
                 <div class="contact-support pull-left">
-                    <span class="glyphicon glyphicon-envelope"></span> Still need help? <a href="mailto:{{config.support_email}}">Get in touch!</a>
+                    <span class="glyphicon glyphicon-envelope"></span> Still need help? <a href="mailto:{{site.email}}">Get in touch!</a>
                 </div>
-                {{/config.support_email}}
-                <div class="last-updated pull-right">
-                    Last updated on {{last_modified}}
-                </div>
+                <!-- <div class="last-updated pull-right">
+                    Last updated on {{page.last_modified}}
+                </div> -->
             </div>
         </section>
 
