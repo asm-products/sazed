@@ -8,6 +8,7 @@
   "dependencies": {
     "EpicEditor": "github:OscarGodson/EpicEditor@^0.2.3",
     "bootstrap": "3.3.1",
+    "css": "^0.1.0",
     "github": "github:michael/github@0.10.3",
     "jquery": "1.11.2"
   }

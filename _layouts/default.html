@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
+<script src="/js/lib/system.js"></script>
+<script src="/js/config.js"></script>
 <body class="{{body_class}}">
 
   {% include header.html %}
@@ -9,8 +11,11 @@
     {{ content }}
   </div>
 
-  <script src="/js/lib/system.js"></script>
-  <script src="/js/config.js"></script>
-  <!-- This loads sazed.js -->
+  
+  <script>
+    // This loads sazed.js and bootstrap css
+    System.import('sazed');
+    System.import('bootstrap/css/bootstrap.min.css!');
+  </script>
 </body>
 </html>
